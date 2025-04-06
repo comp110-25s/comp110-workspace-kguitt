@@ -44,9 +44,10 @@ def favorite_color(names_colors: dict[str, str]) -> str:
         if count > highest_count:
             frequent_color = color
             highest_count = count
-        elif count == highest count and frequent_color is None:
+        elif count == highest_count and frequent_color is None:
             frequent_color = color
     return frequent_color
+
 
 def bin_len(bins: list[str]) -> dict[int, set[str]]:
     """Turn list of strings into a dictionary"""
