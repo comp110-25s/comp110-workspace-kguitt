@@ -1,13 +1,15 @@
 """File to define River class."""
 
+__author__ = "730567850"
+
 from exercises.ex04.fish import Fish
 from exercises.ex04.bear import Bear
 
 
 class River:
     day: int
-    bears: list
-    fish: list
+    bears: list  # type: ignore
+    fish: list  # type: ignore
 
     def __init__(self, num_fish: int, num_bears: int):
         """New River with num_fish Fish and num_bears Bears"""
@@ -31,7 +33,7 @@ class River:
         for bear in self.bears:
             if bear.age <= 5:
                 surviving_bears.append(bear)
-            self.bears = surviving_bears
+        self.bears = surviving_bears
         return None
 
     def bears_eating(self):
